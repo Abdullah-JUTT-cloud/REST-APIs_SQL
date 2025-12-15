@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Email</title>
+    <link rel="stylesheet" href="/edit.css">
+</head>
+<body>
+    <h1>Edit your Mail by Password:</h1>
+    <h2>Your UserName: <%= user.username %> </h2>
+    <form action="/user/<%= user.id %>?_method=PATCH" method="post">
+       <textarea name="email"  id=""><%= user.email %></textarea>
+       <input type="password" name="password" placeholder="Enter pass to edit" id="">
+       <button>Edit</button>
+    </form>
+</body>
+</html>
